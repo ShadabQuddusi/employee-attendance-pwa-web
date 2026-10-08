@@ -1,1 +1,1 @@
-const API_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const API_URL = 'https://script.google.com/macros/s/AKfycbxiRtPjReqkjcZfvitsY-Gsb4sCBXrAr3sHBvDyWq3exQ5AwG3jV0ZZx4bkqYpZa58mlA/exec';
