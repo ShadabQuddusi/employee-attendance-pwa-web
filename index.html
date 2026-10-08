@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css">
+<title>Employee Attendance</title>
+</head>
+<body>
+<main class="app">
+  <section id="loginView" class="card">
+    <h1>Employee Attendance</h1>
+    <p class="muted">Secure multi-site attendance</p>
+    <label>Employee ID
+      <input id="employeeId" autocomplete="username" placeholder="EMP001">
+    </label>
+    <button id="deviceLogin">Login</button>
+    <button id="enroll" class="secondary">First-time / Device Recovery</button>
+    <div id="loginMsg" class="msg"></div>
+  </section>
+
+  <section id="otpView" class="card hidden">
+    <h2>Email verification</h2>
+    <p class="muted">A 6-digit OTP was sent to the employee's registered email.</p>
+    <label>OTP<input id="otp" inputmode="numeric" maxlength="6" autocomplete="one-time-code"></label>
+    <button id="verifyOtp">Verify & Register Device</button>
+    <button id="backLogin" class="secondary">Back</button>
+    <div id="otpMsg" class="msg"></div>
+  </section>
+
+  <section id="dashboardView" class="card hidden">
+    <header class="row">
+      <div>
+        <h2 id="employeeName">Employee</h2>
+        <p id="employeeMeta" class="muted"></p>
+      </div>
+      <button id="logout" class="secondary">Logout</button>
+    </header>
+
+    <div id="statusCard" class="status">Loading...</div>
+
+    <div class="locationBox">
+      <b>Location</b>
+      <div id="locationText">Not checked</div>
+    </div>
+
+    <div class="actions">
+      <button id="checkIn">Check In</button>
+      <button id="checkOut" class="secondary">Check Out</button>
+    </div>
+
+    <h3>Recent attendance</h3>
+    <div id="history">Loading...</div>
+    <div id="actionMsg" class="msg"></div>
+  </section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/geofence.js"></script>
+<script src="js/device.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
